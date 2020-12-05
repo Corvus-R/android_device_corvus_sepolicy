@@ -16,20 +16,20 @@ endif
 endif
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/evolution/sepolicy/common/public
+    device/corvus/sepolicy/common/public
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/evolution/sepolicy/common/private
+    device/corvus/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/evolution/sepolicy/common/dynamic \
-    device/evolution/sepolicy/common/system
+    device/corvus/sepolicy/common/dynamic \
+    device/corvus/sepolicy/common/system
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/evolution/sepolicy/common/dynamic \
-    device/evolution/sepolicy/common/vendor
+    device/corvus/sepolicy/common/dynamic \
+    device/corvus/sepolicy/common/vendor
 endif
 
 # Selectively include legacy rules defined by the products
--include device/evolution/sepolicy/legacy-common/sepolicy.mk
+-include device/corvus/sepolicy/legacy-common/sepolicy.mk
